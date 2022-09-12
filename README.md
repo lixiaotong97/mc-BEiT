@@ -108,7 +108,7 @@ bash tools/dist_train.sh \
 + For example, we finetune a ViT-base backbone with MaskRCNN and the model is trained for 25 epochs.
 
 ```
-cd mimdet
+cd detection
 python lazyconfig_train_net.py --config-file configs/benchmarking/benchmarking_mask_rcnn_base_FPN_25ep_LSJ_mc-beit.py --num-gpus 8 --num-machines 4 --dist-url tcp://127.0.0.1:21633 $3 $4 $5
 ```
 ## Acknowledgement
