@@ -47,7 +47,7 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 ## Pre-training on ImageNet-1K
 + Download the off-the-shelf tokenizer and config in this [link](https://drive.google.com/drive/folders/101qHTHO5YiS3RLe7g3j_Uku_JdR7GKge?usp=sharing) and place it under `./weight/tokenzier/`.
 
-+ We pre-train the ViT-Base model with 16 NVIDIA A100/V100 GPUS on ImageNet-1K as follows:
++ We pre-train the ViT-Base model with 16 NVIDIA A100/V100 GPUs on ImageNet-1K as follows:
 
 ```
 OUTPUT_DIR="./output/mcbeit_pretrained"
@@ -68,7 +68,7 @@ python -m torch.distributed.launch --nproc_per_node=16 run_mcbeit_pretraining.py
 ```
 
 ## Fine-tuning on ImageNet-1K Classification
-+ We finetune the pre-trained ViT-Base model with 8 NVIDIA A100/V100 GPUS as follows: 
++ We finetune the pre-trained ViT-Base model with 8 NVIDIA A100/V100 GPUs as follows: 
 ```
 CKP="./output/mcbeit_pretrained/checkpoint-799.pth"
 OUTPUT_DIR="./output/mcbeit_finetuned/"
@@ -90,7 +90,7 @@ cd semantic_segmentation
 pip install mmcv-full==1.3.0 mmsegmentation==0.11.0
 pip install scipy timm==0.3.2
 ```
-+ For example, we finetune a ViT-base backbone with UperNet using 8 NVIDIA A100/V100 GPUS:
++ For example, we finetune a ViT-base backbone with UperNet using 8 NVIDIA A100/V100 GPUs:
 ```
 CKP='/mcbeit_pretrained/checkpoint-799.pth'
 bash tools/dist_train.sh \
