@@ -29,6 +29,7 @@ def _cfg(url='', **kwargs):
     }
 
 
+
 class DropPath(nn.Module):
     """Drop paths (Stochastic Depth) per sample  (when applied in main path of residual blocks).
     """

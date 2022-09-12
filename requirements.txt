@@ -1,0 +1,18 @@
+# torch==1.7.1
+# torchvision==0.8.2
+timm==0.3.2
+blobfile
+mypy
+numpy
+pytest
+requests
+einops
+pandas
+tensorboardX
+opencv-python
+pillow==8.2.0
+deepspeed==0.4.0
+scipy
+omegaconf==2.0.0
+pytorch-lightning==1.0.8
+pyarrow
